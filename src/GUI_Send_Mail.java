@@ -98,6 +98,7 @@ public class GUI_Send_Mail {
 		        if (returnValue == JFileChooser.APPROVE_OPTION) {
 		          File selectedFile = fileChooser.getSelectedFile();
 		          lst_Attachments.add(selectedFile);
+		          // add file name of attachment to text area
 		          txt_Attachments.append(selectedFile.getName() + "; ");
 		        }
 			}
@@ -123,11 +124,7 @@ public class GUI_Send_Mail {
 		});
 		btn_Send.setBounds(12, 346, 200, 50);
 		panel.add(btn_Send);
-		
-		txt_Attachments = new JTextArea();
-		txt_Attachments.setEditable(false);
-		txt_Attachments.setBounds(103, 229, 258, 50);
-		panel.add(txt_Attachments);
+
 		
 		JScrollPane scr_Attachments = new JScrollPane(txt_Attachments);
 		scr_Attachments.setBounds(104, 283, 257, 50);

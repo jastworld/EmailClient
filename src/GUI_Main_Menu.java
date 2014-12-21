@@ -10,6 +10,8 @@ import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 /**
  * GUI for the main menu - runnable
@@ -62,6 +64,7 @@ public class GUI_Main_Menu {
 		
 		// create send mail button to open GUI to send mail
 		JButton btn_SendMail = new JButton("Send Mail");
+		btn_SendMail.setBounds(167, 78, 124, 50);
 		btn_SendMail.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -72,10 +75,12 @@ public class GUI_Main_Menu {
 				}
 			}
 		});
+		panel.setLayout(null);
 		panel.add(btn_SendMail);
 		
 		// create check mail button to open GUI to check mail
 		JButton btn_CheckMail = new JButton("Check Mail");
+		btn_CheckMail.setBounds(167, 141, 124, 50);
 		btn_CheckMail.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -90,6 +95,7 @@ public class GUI_Main_Menu {
 		
 		// create set flags button to open GUI to set custom flags
 		JButton btn_SetFlags = new JButton("Set Flags");
+		btn_SetFlags.setBounds(167, 204, 124, 50);
 		btn_SetFlags.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -101,6 +107,10 @@ public class GUI_Main_Menu {
 			}
 		});
 		panel.add(btn_SetFlags);
+		
+		JLabel lbl_Title = new JLabel("Select an option...");
+		lbl_Title.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lbl_Title.setBounds(12, 13, 420, 52);
+		panel.add(lbl_Title);
 	}
-
 }
